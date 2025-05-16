@@ -21,7 +21,7 @@ const props = defineProps({
   }
 });
 const colorClass = {
-  primary: 'bg-gradient-to-r from-pink-400 to-purple-500 text-white shadow-lg hover:scale-105 hover:shadow-xl',
+  primary: 'bg-gradient-to-r from-gray-100 to-gray-300 dark:from-gray-900 dark:to-black text-white shadow-lg hover:scale-105 hover:shadow-xl',
   secondary: 'bg-white text-gray-800 shadow-md border border-gray-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg',
   success: 'bg-blue-600 text-white hover:bg-blue-700',
 }[props.color] || '';
