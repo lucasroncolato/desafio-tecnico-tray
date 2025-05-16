@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import BaseButton from "@/components/elements/BaseButton/index.vue";
+import BaseButton from "./index.vue";
 
 describe("BaseButton", () => {
   it("renderiza o slot corretamente", () => {

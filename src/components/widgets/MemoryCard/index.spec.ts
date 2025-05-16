@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
-import MemoryCard from '@/components/widgets/MemoryCard/MemoryCard.vue'
+import MemoryCard from './index.vue'
 
 describe('MemoryCard.vue', () => {
   it('deve emitir o evento flip ao clicar na carta', async () => {

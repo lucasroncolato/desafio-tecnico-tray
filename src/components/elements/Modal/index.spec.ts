@@ -1,5 +1,6 @@
+
 import { mount } from '@vue/test-utils'
-import BaseModal from '@/components/elements/BaseModal/index.vue'
+import BaseModal from './index.vue'
 
 describe('BaseModal', () => {
   it('renderiza o conteúdo do slot quando show=true', () => {
