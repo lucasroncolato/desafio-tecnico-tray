@@ -6,13 +6,13 @@
     </h2>
     <p class="text-lg mb-2 text-gray-700">
       <span class="inline-flex items-center gap-1">
-        <ClockIcon class="w-6 h-6 text-purple-500" />
+        <ClockIcon class="w-6 h-6 text-gray-500" />
         <strong>{{ time }}s</strong>
       </span>
     </p>
     <p class="text-lg mb-6 text-gray-700">
       <span class="inline-flex items-center gap-1">
-        <BoltIcon class="w-6 h-6 text-purple-500" />
+        <BoltIcon class="w-6 h-6 text-gray-500" />
         <strong>{{ attempts }}</strong> tentativas
       </span>
     </p>

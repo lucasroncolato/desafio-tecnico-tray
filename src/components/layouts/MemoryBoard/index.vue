@@ -20,21 +20,21 @@
       class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 bg-white bg-opacity-80 backdrop-blur-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-md mt-4 sm:mt-8 w-full max-w-2xl"
     >
       <div class="flex items-center gap-2">
-        <BoltIcon class="w-6 h-6 text-purple-500" />
+        <BoltIcon class="w-6 h-6 text-gray-500" />
         <span class="text-gray-700 font-bold text-base"
           >Tentativas: {{ memoryBoardStore.attempts }}</span
         >
       </div>
 
       <div class="flex items-center gap-2">
-        <ClockIcon class="w-6 h-6 text-purple-500" />
+        <ClockIcon class="w-6 h-6 text-gray-500" />
         <span class="text-gray-700 font-bold text-base"
           >Tempo: {{ formattedTime }}</span
         >
       </div>
 
       <BaseButton color="primary" size="sm" class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0 ml-0 sm:ml-4" @click="resetGame">
-        <ArrowPathIcon class="w-6 h-6 text-purple-200" /> Reiniciar
+        <ArrowPathIcon class="w-6 h-6 text-gray-200" /> Reiniciar
       </BaseButton>
     </div>
   </div>

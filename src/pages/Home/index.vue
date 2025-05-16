@@ -2,15 +2,13 @@
   <Background>
     <div
       class="flex flex-col items-center justify-center z-10 relative gap-3 sm:gap-5 w-full max-w-2xl mx-auto px-2 sm:px-0 py-4 sm:py-8">
-      <BaseButton color="secondary" size="md" class="flex items-center gap-2" @click="openAboutModal">
-        <QuestionMarkCircleIcon class="w-6 h-6 text-purple-500" /> Como jogar
-      </BaseButton>
+      <QuestionMarkCircleIcon class="w-6 h-6 text-gray-500" @click="openAboutModal" />
 
-      <BaseButton v-if="!gameStore.isGameStarted" color="primary" size="md" @click="startGame">
+      <BaseButton v-if="!gameStore.isGameStarted" color="secondary" ghost size="md" @click="startGame">
         Começar Jogo
       </BaseButton>
 
-      <BaseButton v-if="!gameStore.isGameStarted" color="primary" size="md" @click="historyRouter">
+      <BaseButton v-if="!gameStore.isGameStarted" color="secondary" size="md" @click="historyRouter">
         Histórico de Jogos
       </BaseButton>
 
