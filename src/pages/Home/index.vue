@@ -31,7 +31,7 @@ import MemoryBoard from "@/components/layouts/MemoryBoard/index.vue";
 import GameSummaryModal from "@/components/widgets/GameSummaryModal/index.vue";
 import AboutModal from "@/components/widgets/AboutModal/index.vue";
 import BaseButton from "@/components/elements/Button/index.vue";
-import QuestionMarkCircleIcon from "@/components/elements/Icons/QuestionMarkCircleIcon.vue";
+import QuestionMarkCircleIcon from "@/components/elements/Icons/QuestionMarkCircleIcon/index.vue";
 import router from "@/router";
 
 function historyRouter() {
