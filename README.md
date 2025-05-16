@@ -1,5 +1,3 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=9E1FF7&width=700&lines=Case+Tray+%7C+Jogo+da+Mem%C3%B3ria)](https://git.io/typing-svg)
-
 ## 🧠 Desafio Técnico - Tray (Jogo da Memória)
 
 Este projeto consiste em um jogo da memória desenvolvido com **Vue 3**, **TypeScript**, **Vite**, **TailwindCSS** e **Pinia**, como parte de um desafio técnico para a vaga de Programador Front-End II. O jogo inclui autenticação com Google, lógica de tentativa/erro, contagem de tempo e histórico de partidas.
