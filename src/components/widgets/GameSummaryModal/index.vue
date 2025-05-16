@@ -25,9 +25,9 @@
 <script setup lang="ts">
 import BaseModal from "@/components/elements/Modal/index.vue";
 import BaseButton from "@/components/elements/Button/index.vue";
-import BoltIcon from "@/components/elements/Icons/BoltIcon.vue";
-import ClockIcon from "@/components/elements/Icons/ClockIcon.vue";
-import SparkleIcon from "@/components/elements/Icons/SparkleIcon.vue";
+import BoltIcon from "@/components/elements/Icons/BoltIcon/index.vue";
+import ClockIcon from "@/components/elements/Icons/ClockIcon/index.vue";
+import SparkleIcon from "@/components/elements/Icons/SparkleIcon/index.vue";
 import { onMounted } from 'vue';
 import { saveGameSummary } from '@/services/useGameSummaryApi/';
 

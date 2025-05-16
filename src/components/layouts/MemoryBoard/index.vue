@@ -44,9 +44,9 @@
 import MemoryCard from '@/components/widgets/MemoryCard/index.vue';
 import BaseButton from '@/components/elements/Button/index.vue';
 import { useMemoryBoard } from '@/hooks/useMemoryBoard';
-import BoltIcon from '@/components/elements/Icons/BoltIcon.vue';
-import ClockIcon from '@/components/elements/Icons/ClockIcon.vue';
-import ArrowPathIcon from '@/components/elements/Icons/ArrowPathIcon.vue';
+import BoltIcon from '@/components/elements/Icons/BoltIcon/index.vue';
+import ClockIcon from '@/components/elements/Icons/ClockIcon/index.vue';
+import ArrowPathIcon from '@/components/elements/Icons/ArrowPathIcon/index.vue';
 
 const emit = defineEmits<{
   (e: 'game-finished', data: { time: number; attempts: number }): void;

@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue';
-import CloseIcon from '@/components/elements/Icons/CloseIcon.vue';
+import CloseIcon from '@/components/elements/Icons/CloseIcon/index.vue';
 
 const props = defineProps({
   show: { type: Boolean, required: true },
