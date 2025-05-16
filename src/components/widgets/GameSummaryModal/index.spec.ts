@@ -1,5 +1,14 @@
 import { mount } from '@vue/test-utils'
 import GameSummaryModal from '@/components/widgets/GameSummaryModal/index.vue'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+
+beforeEach(() => {
+  // ✅ mock seguro para evitar erro com JSON.parse(null)
+  vi.stubGlobal('localStorage', {
+    getItem: vi.fn(() => JSON.stringify({ name: 'Lucas' })),
+    setItem: vi.fn(),
+  });
+});
 
 describe('GameSummaryModal', () => {
   it('renderiza os dados de tempo e tentativas', () => {
