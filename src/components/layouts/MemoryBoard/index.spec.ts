@@ -27,7 +27,7 @@ describe('MemoryBoard', () => {
   it('renderiza o grid de cartas', async () => {
     const wrapper = mount(MemoryBoard, {
       global: {
-        stubs: ['MemoryCard', 'BaseButton']
+        stubs: ['MemoryCard', 'Button']
       }
     })
     await flushPromises()
@@ -37,7 +37,7 @@ describe('MemoryBoard', () => {
   it('exibe tentativas e tempo', async () => {
     const wrapper = mount(MemoryBoard, {
       global: {
-        stubs: ['MemoryCard', 'BaseButton']
+        stubs: ['MemoryCard', 'Button']
       }
     })
     await flushPromises()

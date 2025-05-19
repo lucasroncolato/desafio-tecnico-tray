@@ -33,16 +33,16 @@
         >
       </div>
 
-      <BaseButton color="primary" size="sm" class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0 ml-0 sm:ml-4" @click="resetGame">
+      <Button color="primary" size="sm" class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0 ml-0 sm:ml-4" @click="resetGame">
         <ArrowPathIcon class="w-6 h-6 text-gray-200" /> Reiniciar
-      </BaseButton>
+      </Button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import MemoryCard from '@/components/widgets/MemoryCard/index.vue';
-import BaseButton from '@/components/elements/Button/index.vue';
+import Button from '@/components/elements/Button/index.vue';
 import { useMemoryBoard } from '@/hooks/useMemoryBoard';
 import BoltIcon from '@/components/elements/Icons/BoltIcon/index.vue';
 import ClockIcon from '@/components/elements/Icons/ClockIcon/index.vue';

@@ -1,10 +1,10 @@
 <template>
   <Background>
-    <BaseButton class="flex items-center justify-center group gap-4 w-full sm:w-auto mb-8" color="secondary" size="md"
+    <Button class="flex items-center justify-center group gap-4 w-full sm:w-auto mb-8" color="secondary" size="md"
       @click="loginWithGoogle">
       <img src="../../assets/icons/google-icon.svg" alt="Logo do Google" width="30" />
       <span class="text-base">Entrar com Google</span>
-    </BaseButton>
+    </Button>
 
     <div class="text-white/70 text-sm animate-pulse text-center w-full">
       Clique no botão para começar a jogar!
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import Background from "@/components/elements/Background/index.vue";
-import BaseButton from "@/components/elements/Button/index.vue";
+import Button from "@/components/elements/Button/index.vue";
 
 function loginWithGoogle() {
   const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
