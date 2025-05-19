@@ -1,5 +1,4 @@
 <template>
-  <Background>
     <Button class="flex items-center justify-center group gap-4 w-full sm:w-auto mb-8" color="secondary" size="md"
       @click="loginWithGoogle">
       <img src="../../assets/icons/google-icon.svg" alt="Logo do Google" width="30" />
@@ -9,7 +8,6 @@
     <div class="text-white/70 text-sm animate-pulse text-center w-full">
       Clique no botão para começar a jogar!
     </div>
-  </Background>
 </template>
 
 <script setup lang="ts">

@@ -17,18 +17,18 @@
     </div>
 
     <div
-      class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 bg-white bg-opacity-80 backdrop-blur-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-md mt-4 sm:mt-8 w-full max-w-2xl"
+      class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 bg-opacity-80 backdrop-blur-md p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-md mt-4 sm:mt-8 w-full max-w-2xl"
     >
       <div class="flex items-center gap-2">
         <BoltIcon class="w-6 h-6 text-gray-500" />
-        <span class="text-gray-700 font-bold text-base"
+        <span class="text-gray-200 font-bold text-base"
           >Tentativas: {{ memoryBoardStore.attempts }}</span
         >
       </div>
 
       <div class="flex items-center gap-2">
         <ClockIcon class="w-6 h-6 text-gray-500" />
-        <span class="text-gray-700 font-bold text-base"
+        <span class="text-gray-200 font-bold text-base"
           >Tempo: {{ formattedTime }}</span
         >
       </div>
