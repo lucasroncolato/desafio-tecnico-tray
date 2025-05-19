@@ -24,7 +24,6 @@
 
 <script setup lang="ts">
 import { useGameLogic } from "@/hooks/useGameLogic";
-import Background from "@/components/elements/Background/index.vue";
 import MemoryBoard from "@/components/layouts/MemoryBoard/index.vue";
 import GameSummaryModal from "@/components/widgets/GameSummaryModal/index.vue";
 import AboutModal from "@/components/widgets/AboutModal/index.vue";

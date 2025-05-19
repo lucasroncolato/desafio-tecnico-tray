@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import Background from "@/components/elements/Background/index.vue";
 import Button from "@/components/elements/Button/index.vue";
 
 function loginWithGoogle() {
