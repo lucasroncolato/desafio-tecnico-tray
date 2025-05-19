@@ -16,6 +16,7 @@ describe('LoginCallback.vue', () => {
 
   beforeEach(() => {
     vi.clearAllMocks()
+    localStorage.clear()
     window.location.hash = ''
   })
 
@@ -24,7 +25,7 @@ describe('LoginCallback.vue', () => {
 
     router = createRouter({
       history: createWebHistory(),
-      routes: []
+      routes: [{ path: '/', component: { template: '' } }, { path: '/home', component: { template: '' } }]
     })
 
     const pinia = createTestingPinia({
@@ -44,7 +45,7 @@ describe('LoginCallback.vue', () => {
   it('deve salvar o token e redirecionar para "/"', async () => {
     const { authStore } = setupTestWithHash('#access_token=mock_token')
 
-    await new Promise((r) => setTimeout(r, 0)) // espera o onMounted
+    await new Promise((r) => setTimeout(r, 0))
 
     expect(authStore.token).toBe('mock_token')
     expect(authStore.user?.name).toBe('User Test')
