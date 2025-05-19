@@ -25,7 +25,7 @@ Este projeto consiste em um jogo da memória desenvolvido com **Vue 3**, **TypeS
    ```bash
    cp .env.example .env
 
-   VITE_GOOGLE_CLIENT_ID=954809672415-o6l1us7tpb42qu0jk06dg3ondrt2dgqc.apps.googleusercontent.com
+   VITE_GOOGLE_CLIENT_ID=1068659230657-mcbr68dh1mejnv0lhmqot27vdv7f4la1.apps.googleusercontent.com
    VITE_GOOGLE_REDIRECT_URI=http://localhost:5173/login/callback
    VITE_PEXELS_API_KEY=LBIrMKUGxK8sSnLwRTFMncJL2BTdLdaLydlUgdbzYvaiKACnmYr6rER6
    ```
