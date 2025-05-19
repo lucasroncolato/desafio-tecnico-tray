@@ -1,18 +1,30 @@
 import { mount } from '@vue/test-utils'
 import Login from './index.vue'
-import { describe, it, expect, vi } from 'vitest'
-
-// Mock para o window.location.href
-const originalLocation = window.location
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 
 describe('Login.vue', () => {
+  const originalHref = window.location.href
+
   beforeEach(() => {
-    delete (window as any).location
-    window.location = { href: '', origin: 'http://localhost:5173' } as any
+    // Limpa mocks e reseta href antes de cada teste
+    vi.restoreAllMocks()
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      value: {
+        href: '',
+        origin: 'http://localhost:5173'
+      }
+    })
   })
 
   afterEach(() => {
-    window.location = originalLocation
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      value: {
+        ...window.location,
+        href: originalHref
+      }
+    })
   })
 
   it('deve renderizar o botão com o logo do Google', () => {
@@ -30,14 +42,15 @@ describe('Login.vue', () => {
     import.meta.env.VITE_GOOGLE_CLIENT_ID = 'mock-client-id'
 
     const wrapper = mount(Login)
-
     const button = wrapper.find('button')
+
     await button.trigger('click')
 
-    expect(window.location.href).toContain('https://accounts.google.com/o/oauth2/v2/auth')
-    expect(window.location.href).toContain('client_id=mock-client-id')
-    expect(window.location.href).toContain('redirect_uri=http://localhost:5173/login/callback')
-    expect(window.location.href).toContain('response_type=token')
-    expect(window.location.href).toContain('scope=profile email')
+    const href = window.location.href
+    expect(href).toContain('https://accounts.google.com/o/oauth2/v2/auth')
+    expect(href).toContain('client_id=mock-client-id')
+    expect(href).toContain('redirect_uri=http://localhost:5173/login/callback')
+    expect(href).toContain('response_type=token')
+    expect(href).toContain('scope=profile email')
   })
 })
