@@ -17,14 +17,14 @@
       </span>
     </p>
     <div class="flex justify-center gap-4 mt-6">
-      <BaseButton color="primary" size="md" @click="$emit('restart')">Jogar Novamente</BaseButton>
+      <Button color="primary" size="md" @click="$emit('restart')">Jogar Novamente</Button>
     </div>
   </BaseModal>
 </template>
 
 <script setup lang="ts">
 import BaseModal from "@/components/elements/Modal/index.vue";
-import BaseButton from "@/components/elements/Button/index.vue";
+import Button from "@/components/elements/Button/index.vue";
 import BoltIcon from "@/components/elements/Icons/BoltIcon/index.vue";
 import ClockIcon from "@/components/elements/Icons/ClockIcon/index.vue";
 import SparkleIcon from "@/components/elements/Icons/SparkleIcon/index.vue";

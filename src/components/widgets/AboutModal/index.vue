@@ -12,15 +12,15 @@
       <li>Quando todos os pares forem encontrados, o jogo termina.</li>
     </ul>
     <div class="flex justify-center gap-4 mt-6">
-      <BaseButton color="primary" @click="startGameAndClose">Jogar Agora</BaseButton>
-      <BaseButton color="secondary" @click="closeModal">Fechar</BaseButton>
+      <Button color="primary" @click="startGameAndClose">Jogar Agora</Button>
+      <Button color="secondary" @click="closeModal">Fechar</Button>
     </div>
   </BaseModal>
 </template>
 
 <script setup lang="ts">
 import BaseModal from '@/components/elements/Modal/index.vue';
-import BaseButton from '@/components/elements/Button/index.vue';
+import Button from '@/components/elements/Button/index.vue';
 const emit = defineEmits(['close', 'start']);
 
 function closeModal() {
