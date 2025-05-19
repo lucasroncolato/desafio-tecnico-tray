@@ -1,5 +1,4 @@
 <template>
-  <Background>
     <div
       class="flex flex-col items-center justify-center z-10 relative gap-3 sm:gap-5 w-full max-w-2xl mx-auto px-2 sm:px-0 py-4 sm:py-8">
       <QuestionMarkCircleIcon class="w-6 h-6 text-gray-500" @click="openAboutModal" />
@@ -19,7 +18,6 @@
 
       <AboutModal v-if="showModal" @close="showModal = false" @start="startGame" />
     </div>
-  </Background>
 </template>
 
 <script setup lang="ts">
