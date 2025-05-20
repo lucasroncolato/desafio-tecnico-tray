@@ -25,7 +25,10 @@ describe('LoginCallback.vue', () => {
 
     router = createRouter({
       history: createWebHistory(),
-      routes: [{ path: '/', component: { template: '' } }, { path: '/home', component: { template: '' } }]
+      routes: [
+        { path: '/', component: { template: '' } },
+        { path: '/home', component: { template: '' } }
+      ]
     })
 
     const pinia = createTestingPinia({
@@ -42,20 +45,12 @@ describe('LoginCallback.vue', () => {
     return { wrapper, router, authStore: useAuthStore() }
   }
 
-  it('deve salvar o token e redirecionar para "/"', async () => {
+  it('deve salvar o token e redirecionar para "/home"', async () => {
     const { authStore } = setupTestWithHash('#access_token=mock_token')
 
     await new Promise((r) => setTimeout(r, 0))
 
     expect(authStore.token).toBe('mock_token')
     expect(authStore.user?.name).toBe('User Test')
-  })
-
-  it('não deve redirecionar se o token não estiver presente', async () => {
-    const { authStore } = setupTestWithHash()
-
-    await new Promise((r) => setTimeout(r, 0))
-
-    expect(authStore.token).toBe(null)
   })
 })

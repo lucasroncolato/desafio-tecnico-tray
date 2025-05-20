@@ -7,7 +7,8 @@ const router = useRouter()
 const auth = useAuthStore()
 
 onMounted(async () => {
-  const token = new URLSearchParams(window.location.hash.substring(1)).get('access_token')
+  const token = new URLSearchParams(window.location.hash.substring(1)).get('access_token')?.trim()
+
   if (token) {
     localStorage.setItem('token', token)
     auth.setToken(token)
