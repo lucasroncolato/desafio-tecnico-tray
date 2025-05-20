@@ -1,5 +1,7 @@
 ## 🧠 Desafio Técnico - Tray (Jogo da Memória)
 
+[![Deploy](https://img.shields.io/badge/Ver%20Online-Netlify-brightgreen?style=for-the-badge&logo=netlify)](https://tray-desafio-vue.netlify.app)
+
 Este projeto consiste em um jogo da memória desenvolvido com **Vue 3**, **TypeScript**, **Vite**, **TailwindCSS** e **Pinia**, como parte de um desafio técnico para a vaga de Programador Front-End II. O jogo inclui autenticação com Google, lógica de tentativa/erro, contagem de tempo e histórico de partidas.
 
 ---
