@@ -22,11 +22,11 @@
 </template>
 
 <script setup lang="ts">
-
 import { ref, onMounted } from 'vue'
 import { useAuthStore } from '@/stores/auth'
-import axios from 'axios'
 import { useRouter } from 'vue-router'
+import { db } from '@/services/firebase'
+import { collection, getDocs, query, where, orderBy } from 'firebase/firestore'
 
 const router = useRouter()
 const goBack = () => router.back()
@@ -35,14 +35,20 @@ const auth = useAuthStore()
 const games = ref<any[]>([])
 const loading = ref(true)
 
-const API_URL = 'http://localhost:3001/gamesummaries'
-
 onMounted(async () => {
   try {
-    const { data } = await axios.get(API_URL, {
-      params: { user: auth.user?.name || '' },
-    })
-    games.value = data
+    const userName = auth.user?.name || ''
+    const q = query(
+      collection(db, "gamesummaries"),
+      where("user", "==", userName),
+      orderBy("date", "desc")
+    )
+
+    const querySnapshot = await getDocs(q)
+    games.value = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }))
   } catch (err) {
     console.error('Erro ao buscar histórico:', err)
   } finally {

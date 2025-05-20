@@ -1,19 +1,19 @@
-import axios from 'axios'
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/services/firebase";
 
 interface GameSummary {
-  user: string
-  time: number
-  attempts: number
-  date: string
+  user: string;
+  time: number;
+  attempts: number;
+  date: string;
 }
 
-const API_URL = 'http://localhost:3001/gamesummaries' // json-server local
-
 export async function saveGameSummary(summary: GameSummary): Promise<void> {
+  console.log(summary)
   try {
-    await axios.post(API_URL, summary)
-    console.log('Resumo do jogo salvo com sucesso.')
+    await addDoc(collection(db, "gamesummaries"), summary);
+    console.log("Resumo do jogo salvo com sucesso no Firestore.");
   } catch (error) {
-    console.error('Erro ao salvar o resumo do jogo:', error)
+    console.error("Erro ao salvar o resumo do jogo no Firestore:", error);
   }
 }

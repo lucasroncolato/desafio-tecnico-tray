@@ -1,4 +1,3 @@
-import { saveGameSummary } from '@/services/useGameSummaryApi';
 import { useGameStore } from "@/stores/gameStore";
 import { ref, onMounted } from "vue";
 import { v4 as uuidv4 } from "uuid";
